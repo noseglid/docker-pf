@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/noseglid/portjs.git"
   },
+  "scripts": {
+      "start": "node index.js"
+  },
   "author": "Alexander Olsson <noseglid@gmail.com>",
   "license": "MIT",
   "bugs": {
