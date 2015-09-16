@@ -1,0 +1,20 @@
+{
+  "name": "portjs",
+  "version": "1.0.0",
+  "description": "Forwards any local port to the docker counterpart",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noseglid/portjs.git"
+  },
+  "author": "Alexander Olsson <noseglid@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noseglid/portjs/issues"
+  },
+  "homepage": "https://github.com/noseglid/portjs#readme",
+  "dependencies": {
+      "dockerode": "^2.2.2",
+      "bluebird": "^2.1.10"
+  }
+}
