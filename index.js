@@ -51,11 +51,23 @@ docker.listContainersAsync().then(function (containers) {
             var config = {
                 remoteHost: parsedUrl.hostname,
                 remotePort: port.PublicPort,
-                localPort: port.PublicPort
+                localPort: port.PublicPort,
+                name: container.Names.join(', ')
             };
             var server = net.createServer(newClient.bind(null, config));
             server.listen(config.localPort, function () {
-                console.log('ready for connections on port', config.localPort);
+                console.log('ready for connections on port %d (%s: %s)',
+                    config.localPort, container.Image, config.name);
+            });
+            server.on('error', function (e) {
+                switch (e.code) {
+                case 'EADDRINUSE':
+                    console.error('ERROR: address is already in use: localhost:%d. Will not forward ports for %s', config.localPort, config.name);
+                    break;
+
+                default:
+                    console.error('ERROR: %s\n%s', e.message, e.stack);
+                }
             });
         });
     });
