@@ -19,6 +19,14 @@ function newClient(config, client) {
         forward.pipe(client);
         client.pipe(forward);
     });
+
+    forward.on('error', function (e) {
+        console.log('remote shut down: %s', e.message);
+    });
+
+    client.on('error', function (e) {
+        console.log('client shut down: %s', e.message);
+    });
 }
 
 if (!process.env.DOCKER_HOST || !process.env.DOCKER_CERT_PATH) {
