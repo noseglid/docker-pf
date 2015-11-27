@@ -1,5 +1,5 @@
 {
-  "name": "portjs",
+  "name": "docker-pf",
   "version": "1.0.0",
   "description": "Forwards any local port to the docker counterpart",
   "main": "index.js",
