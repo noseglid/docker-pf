@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noseglid/docker-pf.git"
+    "url": "https://github.com/noseglid/docker-pf.git"
   },
   "scripts": {
     "start": "node index.js"
@@ -13,12 +13,16 @@
   "author": "Alexander Olsson <noseglid@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/noseglid/portjs/issues"
+    "url": "https://github.com/noseglid/docker-pf/issues"
   },
-  "homepage": "https://github.com/noseglid/portjs#readme",
+  "homepage": "https://github.com/noseglid/docker-pf#readme",
   "dependencies": {
     "dockerode": "^2.2.2",
     "bluebird": "^2.1.10"
   },
-  "bin": "index.js"
+  "engines": {
+    "node": ">=5.0.0"
+  },
+  "preferGlobal": true,
+  "bin": { "docker-pf": "index.js" }
 }
