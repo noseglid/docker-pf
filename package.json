@@ -1,6 +1,6 @@
 {
   "name": "docker-pf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Forwards any local port to the docker counterpart",
   "main": "index.js",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "git+https://github.com/noseglid/docker-pf.git"
   },
   "scripts": {
-      "start": "node index.js"
+    "start": "node index.js"
   },
   "author": "Alexander Olsson <noseglid@gmail.com>",
   "license": "MIT",
@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/noseglid/portjs#readme",
   "dependencies": {
-      "dockerode": "^2.2.2",
-      "bluebird": "^2.1.10"
+    "dockerode": "^2.2.2",
+    "bluebird": "^2.1.10"
   },
   "bin": "index.js"
 }
