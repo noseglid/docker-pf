@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noseglid/portjs.git"
+    "url": "git+https://github.com/noseglid/docker-pf.git"
   },
   "scripts": {
       "start": "node index.js"
@@ -19,5 +19,6 @@
   "dependencies": {
       "dockerode": "^2.2.2",
       "bluebird": "^2.1.10"
-  }
+  },
+  "bin": "index.js"
 }
