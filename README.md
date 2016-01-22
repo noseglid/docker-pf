@@ -8,7 +8,7 @@ can utilize the docker services as if they where running on your local machine.
 
 ## Getting started
 
-Export docker-machine variables to shell (replace `default` with the name fo your docker-machine)
+Export docker-machine variables to shell (replace `default` with the name of your docker-machine)
 
     $ eval "$(docker-machine env default)"
   
